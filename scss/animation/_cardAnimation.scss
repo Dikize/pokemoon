@@ -1,0 +1,43 @@
+%box-CardAnimation {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    border-radius: 20px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 140%;
+        background: linear-gradient(#00ccff, #d400d4);
+        animation: CardAnimation 4s linear infinite;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 4px;
+        background: #0e1538;
+        border-radius: 16px;
+    }
+    & > div {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+
+@keyframes CardAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
