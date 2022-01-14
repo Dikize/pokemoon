@@ -128,20 +128,11 @@ footer .container-itemFooter .container-social-icons a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     text-decoration: none;
-    -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    -webkit-transition: .2s linear;
     transition: .2s linear;
 }
 

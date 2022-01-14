@@ -2,6 +2,7 @@
 .container-main {
     position: relative;
     width: 100%;
+    display: flex;
 
 
     .main {
@@ -20,12 +21,14 @@
 
 @media (max-width: 960px) {
     .container-main {
-
+        display: grid !important;
+        grid-template-rows: 105px auto;
+        height: auto;
         .main {
             width: 100%;
-            height: calc(100vh - 80px);
-            top: 190px;
-
+            height: 100%;
+            top: 105px;
+            left: 0;
 
         }
     }

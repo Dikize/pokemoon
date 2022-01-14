@@ -1,6 +1,7 @@
 /* Animation */
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
 @-webkit-keyframes colors {
   0% {
     background: linear-gradient(130deg, #eb3fa9, #395ff6 50%, #eb3fa9);
@@ -56,6 +57,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding: 40px;
+  padding-top: 0;
 }
 
 .container-animCard2 .card-animCard2 {
@@ -1300,6 +1302,467 @@
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
   }
+}
+
+.containerAnimeValise {
+  font-family: 'Anton', sans-serif;
+  height: 353px;
+  margin-top: 30px;
+  color: #666;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 86px;
+}
+
+.briefcase {
+  -webkit-perspective: 840px;
+          perspective: 840px;
+  -webkit-perspective-origin: top;
+          perspective-origin: top;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 420px;
+  height: 210px;
+  --yAngle: -20deg;
+  -webkit-transform: translateY(-26%) scale(1.5);
+          transform: translateY(-26%) scale(1.5);
+}
+
+.briefcase h2 {
+  color: white;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  position: relative;
+  top: 84%;
+}
+
+.briefcase:hover .bottom,
+.briefcase:hover .handle {
+  --yAngle: 160deg;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.briefcase:hover .lockTop:nth-child(1)::after {
+  -webkit-transform: translateY(-22px);
+          transform: translateY(-22px);
+  -webkit-transition: -webkit-transform 0.5s 2.25s;
+  transition: -webkit-transform 0.5s 2.25s;
+  transition: transform 0.5s 2.25s;
+  transition: transform 0.5s 2.25s, -webkit-transform 0.5s 2.25s;
+}
+
+.briefcase:hover .lockTop:nth-child(2)::after {
+  -webkit-transform: translateY(-22px);
+          transform: translateY(-22px);
+  -webkit-transition: -webkit-transform 0.5s 2s;
+  transition: -webkit-transform 0.5s 2s;
+  transition: transform 0.5s 2s;
+  transition: transform 0.5s 2s, -webkit-transform 0.5s 2s;
+}
+
+.briefcase:hover .top1 {
+  -webkit-animation: topBack 8s;
+          animation: topBack 8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes topBack {
+  0% {
+    -webkit-transform: translate(-50%, 0%) rotateY(var(--yAngle)) translateZ(-80px) rotateX(0deg);
+            transform: translate(-50%, 0%) rotateY(var(--yAngle)) translateZ(-80px) rotateX(0deg);
+  }
+  25%,
+  40% {
+    -webkit-transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(0deg);
+            transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(90deg);
+            transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(90deg);
+  }
+}
+
+@keyframes topBack {
+  0% {
+    -webkit-transform: translate(-50%, 0%) rotateY(var(--yAngle)) translateZ(-80px) rotateX(0deg);
+            transform: translate(-50%, 0%) rotateY(var(--yAngle)) translateZ(-80px) rotateX(0deg);
+  }
+  25%,
+  40% {
+    -webkit-transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(0deg);
+            transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(90deg);
+            transform: translate(-50%, 0%) rotateY(calc(var(--yAngle) + 180deg)) translateZ(-80px) rotateX(90deg);
+  }
+}
+
+.briefcase:hover .top1 .light {
+  background-color: gold;
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+  -webkit-transition: all 4s 3s;
+  transition: all 4s 3s;
+  top: 40px;
+}
+
+.top1 {
+  position: absolute;
+  background-color: #111;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.025)), to(rgba(0, 0, 0, 0.025)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 20%, rgba(0, 0, 0, 0.025));
+  left: 50%;
+  bottom: 50%;
+  width: 320px;
+  height: 20px;
+  -webkit-transform: translate(-50%, 0%) rotateY(var(--yAngle)) translateZ(-80px);
+          transform: translate(-50%, 0%) rotateY(var(--yAngle)) translateZ(-80px);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.top1 > * {
+  position: absolute;
+  background-color: #111;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.025)), to(rgba(0, 0, 0, 0.025)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 20%, rgba(0, 0, 0, 0.025));
+}
+
+.top1 .light {
+  left: 0%;
+  top: 20px;
+  width: 320px;
+  height: 160px;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  background-color: #111;
+}
+
+.top1 .up {
+  left: 0%;
+  top: 0%;
+  width: 320px;
+  height: 160px;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.top1 .right {
+  left: 100%;
+  top: 0%;
+  width: 160px;
+  height: 20px;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.top1 .left {
+  left: 0%;
+  top: 0%;
+  width: 160px;
+  height: 20px;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.top1 .front {
+  left: 0%;
+  top: 0%;
+  width: 320px;
+  height: 20px;
+  -webkit-transform: translateZ(160px);
+          transform: translateZ(160px);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.top1 .lockTop {
+  position: absolute;
+  bottom: 0;
+  width: 56px;
+  height: 8px;
+  background-color: goldenrod;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.025)), to(rgba(0, 0, 0, 0.025)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 20%, rgba(0, 0, 0, 0.025));
+  -webkit-transform: translateZ(0.1px);
+          transform: translateZ(0.1px);
+}
+
+.top1 .lockTop:nth-child(1) {
+  left: 36px;
+}
+
+.top1 .lockTop:nth-child(1)::before {
+  right: 3px;
+}
+
+.top1 .lockTop:nth-child(1)::after {
+  right: 6px;
+}
+
+.top1 .lockTop:nth-child(2) {
+  right: 36px;
+}
+
+.top1 .lockTop:nth-child(2)::before {
+  left: 3px;
+}
+
+.top1 .lockTop:nth-child(2)::after {
+  left: 6px;
+}
+
+.top1 .lockTop::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  width: 14px;
+  height: 2px;
+  background-color: #0001;
+  border-radius: 2px;
+  -webkit-box-shadow: 0px 0px 2px #0008;
+          box-shadow: 0px 0px 2px #0008;
+}
+
+.bottom {
+  position: absolute;
+  background-color: #111;
+  left: 50%;
+  top: 50%;
+  width: 320px;
+  height: 160px;
+  -webkit-transform: translate(-50%, -25%) rotateY(var(--yAngle)) rotateX(90deg);
+          transform: translate(-50%, -25%) rotateY(var(--yAngle)) rotateX(90deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.bottom > * {
+  position: absolute;
+  background-color: #111;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.025)), color-stop(50%, rgba(0, 0, 0, 0.025)), color-stop(60%, rgba(255, 255, 255, 0.025)), to(rgba(0, 0, 0, 0.025)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 20%, rgba(0, 0, 0, 0.025) 50%, rgba(255, 255, 255, 0.025) 60%, rgba(0, 0, 0, 0.025));
+}
+
+.bottom .left {
+  right: 0%;
+  top: 75%;
+  width: 160px;
+  height: 40px;
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg);
+          transform: rotateY(-90deg) rotateZ(90deg);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.bottom .right {
+  left: 0%;
+  top: -25%;
+  width: 160px;
+  height: 40px;
+  -webkit-transform: rotateY(-90deg) rotateZ(90deg);
+          transform: rotateY(-90deg) rotateZ(90deg);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.bottom .back {
+  left: 0%;
+  top: -25%;
+  width: 320px;
+  height: 40px;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.bottom .front {
+  left: 0%;
+  top: 75%;
+  width: 320px;
+  height: 40px;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.lock {
+  position: absolute;
+  top: 0;
+  width: 56px;
+  height: 16px;
+  background-color: goldenrod;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.025)), to(rgba(0, 0, 0, 0.025)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 20%, rgba(0, 0, 0, 0.025));
+}
+
+.lock:nth-child(1) {
+  left: 36px;
+}
+
+.lock:nth-child(1)::before {
+  left: 4px;
+}
+
+.lock:nth-child(1)::after {
+  left: 16px;
+}
+
+.lock:nth-child(2) {
+  right: 36px;
+}
+
+.lock:nth-child(2)::before {
+  right: 4px;
+}
+
+.lock:nth-child(2)::after {
+  right: 16px;
+}
+
+.lock::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: goldenrod;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 1px 4px #0008;
+          box-shadow: 1px 1px 4px #0008;
+}
+
+.lock::after {
+  font-size: 5px;
+  color: #000;
+  content: '6 | 6 | 6';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 4px;
+  width: 20px;
+  height: 8px;
+  border-radius: 1px;
+  -webkit-box-shadow: inset 0px -3px 6px #0008;
+          box-shadow: inset 0px -3px 6px #0008;
+}
+
+.handle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 80px;
+  -webkit-transform: translate(-50%, -50%) rotateY(var(--yAngle)) rotateX(45deg) translateY(70px) translateZ(50px);
+          transform: translate(-50%, -50%) rotateY(var(--yAngle)) rotateX(45deg) translateY(70px) translateZ(50px);
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.handle_conn {
+  position: absolute;
+  top: 8px;
+  width: 24px;
+  height: 4px;
+  background-color: goldenrod;
+  border-radius: 2px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(20%, rgba(255, 255, 255, 0.025)), to(rgba(0, 0, 0, 0.025)));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 20%, rgba(0, 0, 0, 0.025));
+}
+
+.handle_conn:nth-child(3) {
+  left: 109px;
+}
+
+.handle_conn:nth-child(4) {
+  right: 109px;
+}
+
+.handle_grip {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 100px;
+  height: 80px;
+  border-radius: 40px;
+  border: 20px solid black;
+}
+
+.handle_blur1, .handle_blur2 {
+  content: '';
+  position: absolute;
+  border: solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+.handle_blur1 {
+  left: 0;
+  top: 0;
+  width: 90px;
+  height: 80px;
+  border-width: 0 0 0 10px;
+}
+
+.handle_blur2 {
+  left: 10px;
+  top: 10px;
+  width: 85px;
+  height: 60px;
+  border-width: 0 10px 0 0;
+}
+
+.twitterLink {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0.5em;
+}
+
+.twitterLink img {
+  width: 2em;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: -webkit-filter 0.25s;
+  transition: -webkit-filter 0.25s;
+  transition: filter 0.25s;
+  transition: filter 0.25s, -webkit-filter 0.25s;
+}
+
+.twitterLink img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 @-webkit-keyframes animate {
