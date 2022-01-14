@@ -36,6 +36,7 @@ header {
             width: 100%;
             padding: 0 !important;
 
+            .indicator {display: none}
             .toggle {
                 position: relative;
                 color: black;
@@ -114,9 +115,9 @@ header {
                         align-items: center;
                         justify-content: center;
 
-                        // img {
-
-                        // }
+                        img {
+                            width: 38px;
+                        }
                     }
 
                     .title {
@@ -135,135 +136,150 @@ header {
 }
 
 
-.nav2 {
-    font-family: "Ubuntu", sans-serif;
-    position: relative;
-    width: 100%;
-    z-index: 100;
-
-
-    .navi2 {
-        position: fixed;
-        width: 300px;
-        height: 100%;
-        font-size: large;
-        background: $blue;
-        overflow: hidden;
-        transition: 0.5s;
-        padding: 0 !important;
-
-        &.active2 {
-            background: rgba(255, 255, 255, 0.09);
-            width: 80px;
-
-            .title {
-                display: none;
-            }
-        }
-
-        ul {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 0 !important;
-
-            .toggle2 {
-                position: relative;
-                color: black;
-                width: 60px;
-                height: 60px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 2.5rem;
-                cursor: pointer;
-            }
+@media (max-width: 960px) {
+    .navCustom {  // body
     
-            li {
-                position: relative;
-                width: 100%;
-                list-style: none;
-                border-top-left-radius: 30px;
-                border-bottom-left-radius: 30px;
+        .navi {display: none}
+        // .navi { // navigation
+        //     width: 100% !important;
+        //     height: 80px !important;
+        //     display: flex!important;
+        //     justify-content: center!important;
+        //     align-items: center!important;
+        //     overflow: visible;
+        //     &.active {
+        //         top: 69px;
+        //         left: 80px;
 
-                
-                &:hover,
-                &.hovered { 
-                    background: $white;
-                }
+        //         height: 80px;
+        //         width: 400px;
+        //         background-color: #fff;
+        //         border-radius: 10px;
 
-                &:hover,
-                &.hovered { 
-                    a {
-                        color: $blue;
-                    }
-                    a::before {
-                        content: "";
-                        position: absolute;
-                        right: 0;
-                        top: -50px;
-                        width: 50px;
-                        height: 50px;
-                        background-color: transparent;
-                        border-radius: 50%;
-                        box-shadow: 35px 35px 0 10px $white;
-                        pointer-events: none;
-                    }
-                    a::after {
-                        content: "";
-                        position: absolute;
-                        right: 0;
-                        bottom: -50px;
-                        width: 50px;
-                        height: 50px;
-                        background-color: transparent;
-                        border-radius: 50%;
-                        box-shadow: 35px -35px 0 10px $white;
-                        pointer-events: none;
-                    }
-                }
+        //         .title {
+        //             display: block;
+        //             color: black;
+        //         }
 
-                &:nth-child(2) {
-                    margin-bottom: 40px;
-                    pointer-events: none;
-                }
-                a {
-                    position: relative;
-                    display: block;
-                    width: 100%;
-                    text-decoration: none;
-                    color: $white;
-                    display: flex;
-                    text-align: center;
+        //     }
 
-                    .icon {
-                        position: relative;
-                        min-width: 60px;
-                        height: 60px;
-                        line-height: 70px;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
+        //     ul {
+        //         position: initial;
+        //         display: flex;
+        //         height: 100%;
+        //         margin-bottom: 0;
+    
+        //         .toggle {display: none;}
+        
+        //         li {
+        //             position: relative;
+        //             list-style: none;
+        //             width: 70px;
+        //             height: 80px;
+        //             z-index: 1;
+        //             display: flex;
 
-                        // img {
+        //             &.active { 
+                        
+        //                 a .icon,
+        //                 .icon img {
+        //                     transform: translateY(-20px)
+        //                 }
 
-                        // }
-                    }
+        //                 a .title {
+        //                     opacity: 1;
+        //                     transform: translateY(10px);
+        //                 }
+        //             }
+                    
+        //             a {
+        //                 position: relative;
+        //                 display: flex;
+        //                 justify-content: center;
+        //                 align-items: center;
+        //                 text-align: center;
+        //                 flex-direction: column;
+        //                 width: 100%;
+        //                 font-weight: 900;
+                        
+        //                 // &:hover,
+        //                 // &.hovered { 
+        //                 //     &.icon {
+        //                 //         transform: translateY()
+        //                 //     }
+        //                 // }
 
-                    .title {
-                        position: relative;
-                        display: block;
-                        padding: 0 10px;
-                        height: 60px;
-                        line-height: 60px;
-                        text-align: start;
-                        white-space: nowrap;
-                    }
-                }
-            }
-        }
+        //                 span {
+
+        //                     &.icon {
+        //                         position: relative;
+        //                         color: #222327;
+        //                         height: 20px!important;
+        //                         display: flex;
+        //                         justify-content: center;
+        //                         align-items: center;
+        //                         transition: 0.5s;
+        //                         img {
+        //                             position: absolute;
+        //                             width: 40px;
+        //                             height: 40px;
+        //                             display: block;
+        //                         }
+        //                     }
+
+        //                     &.title {
+        //                         position: absolute;
+        //                         color: #222327;
+        //                         font-weight: 400;
+        //                         font-size: 0.75em;
+        //                         letter-spacing: 0.05em;
+        //                         opacity: 0;
+        //                         transform: translateY(20px);
+        //                         transition: 0.5s;
+        //                     }
+        //                 }
+                        
+        //             }
+        //             a::before {
+        //                 content: "";
+        //                 display: none;
+        //             }
+        //             a::after {
+        //                 content: "";
+        //                 display: none;
+        //             }
+
+        //         }
+                                    
+        //         .indicator {
+        //             display: block;
+        //             position: absolute;
+        //             top: -50%;
+        //             left: 3px;
+
+        //             width: 80px;
+        //             height: 80px;
+        //             background: #29fd53;
+        //             border-radius: 50%;
+        //             border: 6px solid #222327;
+        //             transition: 0.5s;
+
+        //             &::before {
+        //                 content: "";
+        //                 position: absolute;
+        //                 top: 50%;
+        //                 left: -22px;
+        //                 width: 20px;
+        //                 height: 20px;
+        //                 background-color: transparent;
+        //                 border-top-right-radius: 20px;
+        //                 box-shadow: 0px -10px 0px 0px #222327;
+        //                 // pointer-events: none;
+        //             }
+        //         }
+
+        //     }
+        // }
     }
+
 }
-
-

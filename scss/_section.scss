@@ -1,4 +1,36 @@
 // @import '_utilities';
+.container-main {
+    position: relative;
+    width: 100%;
+
+
+    .main {
+        position: absolute !important;
+        width: calc(100% - 80px);
+        left: 80px;
+        transition: 0.5s;
+
+        &.active {
+            width: calc(100% - 300px);
+            left: 300px;
+        }
+    }
+
+}
+
+@media (max-width: 960px) {
+    .container-main {
+
+        .main {
+            width: 100%;
+            height: calc(100vh - 80px);
+            top: 190px;
+
+
+        }
+    }
+}
+
 
 .section {
     @extend %customSection

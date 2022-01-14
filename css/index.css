@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
 *, ::before, ::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -300,6 +299,10 @@ header {
   padding: 0 !important;
 }
 
+.navCustom .navi ul .indicator {
+  display: none;
+}
+
 .navCustom .navi ul .toggle {
   position: relative;
   color: black;
@@ -395,6 +398,10 @@ header {
           justify-content: center;
 }
 
+.navCustom .navi ul li a .icon img {
+  width: 38px;
+}
+
 .navCustom .navi ul li a .title {
   position: relative;
   display: block;
@@ -405,145 +412,10 @@ header {
   white-space: nowrap;
 }
 
-.nav2 {
-  font-family: "Ubuntu", sans-serif;
-  position: relative;
-  width: 100%;
-  z-index: 100;
-}
-
-.nav2 .navi2 {
-  position: fixed;
-  width: 300px;
-  height: 100%;
-  font-size: large;
-  background: #287bff;
-  overflow: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  padding: 0 !important;
-}
-
-.nav2 .navi2.active2 {
-  background: rgba(255, 255, 255, 0.09);
-  width: 80px;
-}
-
-.nav2 .navi2.active2 .title {
-  display: none;
-}
-
-.nav2 .navi2 ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 0 !important;
-}
-
-.nav2 .navi2 ul .toggle2 {
-  position: relative;
-  color: black;
-  width: 60px;
-  height: 60px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2.5rem;
-  cursor: pointer;
-}
-
-.nav2 .navi2 ul li {
-  position: relative;
-  width: 100%;
-  list-style: none;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-}
-
-.nav2 .navi2 ul li:hover, .nav2 .navi2 ul li.hovered {
-  background: #fff;
-}
-
-.nav2 .navi2 ul li:hover a, .nav2 .navi2 ul li.hovered a {
-  color: #287bff;
-}
-
-.nav2 .navi2 ul li:hover a::before, .nav2 .navi2 ul li.hovered a::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: -50px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
-  -webkit-box-shadow: 35px 35px 0 10px #fff;
-          box-shadow: 35px 35px 0 10px #fff;
-  pointer-events: none;
-}
-
-.nav2 .navi2 ul li:hover a::after, .nav2 .navi2 ul li.hovered a::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: -50px;
-  width: 50px;
-  height: 50px;
-  background-color: transparent;
-  border-radius: 50%;
-  -webkit-box-shadow: 35px -35px 0 10px #fff;
-          box-shadow: 35px -35px 0 10px #fff;
-  pointer-events: none;
-}
-
-.nav2 .navi2 ul li:nth-child(2) {
-  margin-bottom: 40px;
-  pointer-events: none;
-}
-
-.nav2 .navi2 ul li a {
-  position: relative;
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-}
-
-.nav2 .navi2 ul li a .icon {
-  position: relative;
-  min-width: 60px;
-  height: 60px;
-  line-height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.nav2 .navi2 ul li a .title {
-  position: relative;
-  display: block;
-  padding: 0 10px;
-  height: 60px;
-  line-height: 60px;
-  text-align: start;
-  white-space: nowrap;
+@media (max-width: 960px) {
+  .navCustom .navi {
+    display: none;
+  }
 }
 
 .navbar2 {
@@ -609,9 +481,8 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -705,6 +576,32 @@ header {
   }
   .section-header .card-cont .card-wrapper .card-content .h1-header {
     font-size: xx-large;
+  }
+}
+
+.container-main {
+  position: relative;
+  width: 100%;
+}
+
+.container-main .main {
+  position: absolute !important;
+  width: calc(100% - 80px);
+  left: 80px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.container-main .main.active {
+  width: calc(100% - 300px);
+  left: 300px;
+}
+
+@media (max-width: 960px) {
+  .container-main .main {
+    width: 100%;
+    height: calc(100vh - 80px);
+    top: 190px;
   }
 }
 
@@ -1103,6 +1000,7 @@ header {
 }
 
 .parallax {
+  margin: 0 !important;
   background: #19172e;
 }
 
@@ -2339,146 +2237,6 @@ header {
   }
 }
 
-.container-typing {
-  font-family: 'IM Fell English', serif;
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.typing {
-  font-size: 48px;
-}
-
-.typing::before {
-  content: '';
-  -webkit-animation: text 15s step-end infinite;
-          animation: text 15s step-end infinite;
-}
-
-@keyframes text {
-  0% {
-    content: '';
-  }
-  20% {
-    content: 'Po';
-  }
-  22% {
-    content: 'Pok';
-  }
-  24% {
-    content: 'Poke';
-  }
-  26% {
-    content: 'Pokem';
-  }
-  28% {
-    content: 'Pokemo';
-  }
-  30% {
-    content: 'Pokemoo';
-  }
-  32% {
-    content: 'Pokemoon';
-  }
-  34% {
-    content: 'Pokemoon ';
-  }
-  36% {
-    content: 'Pokemoon t';
-  }
-  38% {
-    content: 'Pokemoon th';
-  }
-  40% {
-    content: 'Pokemoon the';
-  }
-  42% {
-    content: 'Pokemoon the ';
-  }
-  44% {
-    content: 'Pokemoon the w';
-  }
-  46% {
-    content: 'Pokemoon the wo';
-  }
-  48% {
-    content: 'Pokemoon the wor';
-  }
-  50% {
-    content: 'Pokemoon the worl';
-  }
-  52% {
-    content: 'Pokemoon the world.';
-  }
-  54% {
-    content: 'Pokemoon the world ';
-  }
-  56% {
-    content: 'Pokemoon the world o';
-  }
-  58% {
-    content: 'Pokemoon the world of';
-  }
-  60% {
-    content: 'Pokemoon the world of ';
-  }
-  62% {
-    content: 'Pokemoon the world of t';
-  }
-  64% {
-    content: 'Pokemoon the world of to';
-  }
-  68% {
-    content: 'Pokemoon the world of tom';
-  }
-  70% {
-    content: 'Pokemoon the world of tomo!';
-  }
-  72% {
-    content: 'Pokemoon the world of tomor';
-  }
-  74% {
-    content: 'Pokemoon the world of tomorr';
-  }
-  76% {
-    content: 'Pokemoon the world of tomorro';
-  }
-  78% {
-    content: 'Pokemoon the world of tomorrow';
-  }
-}
-
-.typing::after {
-  content: '';
-  display: inline-block;
-  width: 0.1em;
-  height: 0.75em;
-  margin-left: 0.1em;
-  background-color: #fff;
-  -webkit-animation: blink 0.75s ease-in-out infinite;
-          animation: blink 0.75s ease-in-out infinite;
-}
-
-@keyframes blink {
-  0%,
-  25%,
-  100% {
-    opacity: 1;
-  }
-  50%,
-  75% {
-    opacity: 0;
-  }
-}
-
 .section4-roadmap .roadmap-content .roadmap-item {
   position: relative;
   width: 300px;
@@ -2541,27 +2299,6 @@ header {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
-}
-
-*, ::before, ::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh;
-  background-color: #1d061a;
 }
 
 .container-CardGlass {
