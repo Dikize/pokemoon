@@ -37,8 +37,6 @@ input[type="reset"] {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 14px;
   line-height: 20px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
 }
 
 .container-main {
@@ -474,7 +472,7 @@ header {
           align-items: center;
 }
 
-.navCustomMobile .navigation ul {
+.navCustomMobile .navigation .navCustomMobileUl {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -489,7 +487,7 @@ header {
           justify-content: center;
 }
 
-.navCustomMobile .navigation ul li {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile {
   position: relative;
   list-style: none;
   width: 90px;
@@ -497,155 +495,155 @@ header {
   z-index: 1;
 }
 
-.navCustomMobile .navigation ul li:nth-child(1) {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(1) {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
 }
 
-.navCustomMobile .navigation ul li:nth-child(2) {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(2) {
   -ms-grid-column: 3;
   -ms-grid-column-span: 1;
   grid-column: 3/4;
 }
 
-.navCustomMobile .navigation ul li:nth-child(2) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(2) a img {
   width: 47px;
 }
 
-.navCustomMobile .navigation ul li:nth-child(3) {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(3) {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
 }
 
-.navCustomMobile .navigation ul li:nth-child(3) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(3) a img {
   width: 38px;
   height: 38px;
 }
 
-.navCustomMobile .navigation ul li:nth-child(4) {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(4) {
   -ms-grid-column: 5;
   -ms-grid-column-span: 1;
   grid-column: 5/6;
 }
 
-.navCustomMobile .navigation ul li:nth-child(5) {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(5) {
   -ms-grid-column: 6;
   -ms-grid-column-span: 1;
   grid-column: 6/7;
 }
 
-.navCustomMobile .navigation ul li:nth-child(5) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(5) a img {
   width: 33px;
   height: 37px;
 }
 
-.navCustomMobile .navigation ul li:nth-child(6) {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(6) {
   -ms-grid-column: 7;
   -ms-grid-column-span: 1;
   grid-column: 7/8;
 }
 
-.navCustomMobile .navigation ul li a .title {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile a .title {
   opacity: 1;
   -webkit-transform: translateY(31px);
           transform: translateY(31px);
   font-size: large;
 }
 
-.navCustomMobile .navigation ul li.active a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active a img {
   -webkit-transform: translateY(-20px);
           transform: translateY(-20px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(1) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(1) a img {
   -webkit-transform: translateY(-27px) translateX(1px);
           transform: translateY(-27px) translateX(1px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(1) a .title {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(1) a .title {
   -webkit-transform: translateY(26px) translateX(4px);
           transform: translateY(26px) translateX(4px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(2) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(2) a img {
   -webkit-transform: translateY(-26px) translateX(3px);
           transform: translateY(-26px) translateX(3px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(3) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(3) a img {
   -webkit-transform: translateY(-26px) translateX(3px);
           transform: translateY(-26px) translateX(3px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(4) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(4) a img {
   -webkit-transform: translateY(-27px) translateX(1px);
           transform: translateY(-27px) translateX(1px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(4) a .title {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(4) a .title {
   font-size: smaller;
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(5) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(5) a img {
   -webkit-transform: translateY(-27px) translateX(1px);
           transform: translateY(-27px) translateX(1px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(6) a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(6) a img {
   -webkit-transform: translateY(-26px) translateX(2px);
           transform: translateY(-26px) translateX(2px);
 }
 
-.navCustomMobile .navigation ul li.active:nth-child(6) a .title {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active:nth-child(6) a .title {
   font-size: smaller;
 }
 
-.navCustomMobile .navigation ul li.active a .title {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile.active a .title {
   opacity: 1;
   -webkit-transform: translateY(27px) translateX(2px);
           transform: translateY(27px) translateX(2px);
   font-size: large;
 }
 
-.navCustomMobile .navigation ul li:nth-child(1).active ~ .indicator {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(1).active ~ .indicatorNav {
   opacity: 1;
   -webkit-transform: translateX(calc(90px * 0.4));
           transform: translateX(calc(90px * 0.4));
 }
 
-.navCustomMobile .navigation ul li:nth-child(2).active ~ .indicator {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(2).active ~ .indicatorNav {
   opacity: 1;
   -webkit-transform: translateX(calc(90px * 1.4));
           transform: translateX(calc(90px * 1.4));
 }
 
-.navCustomMobile .navigation ul li:nth-child(3).active ~ .indicator {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(3).active ~ .indicatorNav {
   opacity: 1;
   -webkit-transform: translateX(calc(90px * 2.4));
           transform: translateX(calc(90px * 2.4));
 }
 
-.navCustomMobile .navigation ul li:nth-child(4).active ~ .indicator {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(4).active ~ .indicatorNav {
   opacity: 1;
   -webkit-transform: translateX(calc(90px * 3.4));
           transform: translateX(calc(90px * 3.4));
 }
 
-.navCustomMobile .navigation ul li:nth-child(5).active ~ .indicator {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(5).active ~ .indicatorNav {
   opacity: 1;
   -webkit-transform: translateX(calc(90px * 4.4));
           transform: translateX(calc(90px * 4.4));
 }
 
-.navCustomMobile .navigation ul li:nth-child(6).active ~ .indicator {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile:nth-child(6).active ~ .indicatorNav {
   opacity: 1;
   -webkit-transform: translateX(calc(90px * 5.4));
           transform: translateX(calc(90px * 5.4));
 }
 
-.navCustomMobile .navigation ul li a {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile a {
   position: relative;
   width: 90px;
   height: 100%;
@@ -666,7 +664,7 @@ header {
           flex-direction: column;
 }
 
-.navCustomMobile .navigation ul li a img {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile a img {
   position: relative;
   display: block;
   width: 40px;
@@ -679,7 +677,7 @@ header {
           transform: translateY(11px) translateX(0);
 }
 
-.navCustomMobile .navigation ul li a .title {
+.navCustomMobile .navigation .navCustomMobileUl .listNavMobile a .title {
   position: absolute;
   color: #222327;
   font-size: 0.75em;
@@ -693,7 +691,7 @@ header {
   transition: 0.5s;
 }
 
-.navCustomMobile .navigation ul .indicator {
+.navCustomMobile .navigation .navCustomMobileUl .indicatorNav {
   display: block;
   position: absolute;
   top: -50%;
@@ -707,7 +705,7 @@ header {
   opacity: 0;
 }
 
-.navCustomMobile .navigation ul .indicator::before {
+.navCustomMobile .navigation .navCustomMobileUl .indicatorNav::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -720,7 +718,7 @@ header {
           box-shadow: 1px -10px 0px 0px #222327;
 }
 
-.navCustomMobile .navigation ul .indicator::after {
+.navCustomMobile .navigation .navCustomMobileUl .indicatorNav::after {
   content: "";
   position: absolute;
   top: 50%;
