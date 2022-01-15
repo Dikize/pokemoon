@@ -1,16 +1,7 @@
-*,
-*::before,
-*::after {
-    padding: 0;
-    margin: 0 auto;
-    box-sizing: border-box;
-    transform-style: preserve-3d;
-}
-
 $speed: 3s;
 $rotateSpeed: 60s;
 
-body {
+.Container-cradle {
     background-color: #111;
     color: #fff;
     min-height: 100vh;
@@ -21,6 +12,7 @@ body {
     perspective: 800px;
     perspective-origin: center calc(50% - 2.4em);
     overflow: hidden;
+    transform-style: preserve-3d;
 }
 
 .cradle {

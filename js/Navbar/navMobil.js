@@ -1,12 +1,11 @@
-scrl();
-window.onscroll = function() { scrl(); }
+
 
 function scrl() {
 
     var pos = Math.max(0, Math.min(1 ,(window.scrollY / (document.body.scrollHeight - window.innerHeight))));
 
-    var allLines = document.querySelectorAll('.nav_line');
-    var allLinks = document.querySelectorAll('.nav_link');
+    let allLines = document.querySelectorAll('.nav_line');
+    let allLinks = document.querySelectorAll('.nav_link');
     
     for (let i = 0 ; i < 5 ; i++) {
 
@@ -21,11 +20,14 @@ function scrl() {
 }
 
 function openMenu() {
-    document.querySelector('#navBarMobil').classList.add('open');
+    document.querySelector('nav').classList.add('open');
     document.querySelector('.blackBackground').classList.add('open');
 }
 
 function closeMenu() {
-    document.querySelector('#navBarMobil').classList.remove('open');
+    document.querySelector('nav').classList.remove('open');
     document.querySelector('.blackBackground').classList.remove('open');
 }
+
+scrl();
+window.onscroll = function() { scrl(); }

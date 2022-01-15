@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
-
 @media (max-width: 960px) {
     .navCustomMobile {display: block}
     #navBarMobil {display: none}
@@ -33,134 +31,133 @@
     height: 6em;
     max-height: 6em;
     perspective: 100vh;
-    z-index: 1000;
+}
 
-    &.open {
-        bottom: 50%;
-        transform: translate(-50%, 50%);
-        width: 30em;
-        max-width: 90vw;
-        height: 90vh;
-        max-height: 40em;
-    
-        .front {
-            transform: rotateY(180deg);
-        }
-    
-        .back {
-            transform: rotateY(0deg);
-        }
-    }
+#navBarMobil.open {
+    bottom: 50%;
+    transform: translate(-50%, 50%);
+    width: 30em;
+    max-width: 90vw;
+    height: 90vh;
+    max-height: 40em;
+}
 
-    .front {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 1.5em;
-        background-color: #fff;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        transition: all 1s;
-        backface-visibility: hidden;
+#navBarMobil .front {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5em;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: all 1s;
+    backface-visibility: hidden;
+}
 
-        .nav_line {
-            display: block;
-            width: 2em;
-            height: 2px;
-            background-color: #333;
+#navBarMobil.open .front {
+    transform: rotateY(180deg);
+}
 
-            &.inView {
-                transform: rotateY(180deg) scale(1.25, 2);
-                transition: all 0.5s;
-            }
+#navBarMobil .back {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    background-color: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transform: rotateY(-180deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+}
 
-            &:nth-child(1).inView {
-                background-color: #5e35b1;
-            }
+#navBarMobil.open .back {
+    transform: rotateY(0deg);
+}
 
-            &:nth-child(2).inView {
-                background-color: #3949ab;
-            }
+.nav_line {
+    display: block;
+    width: 2em;
+    height: 2px;
+    background-color: #333;
+}
 
-            &:nth-child(3).inView {
-                background-color: #1e88e5;
-            }
+.nav_line.inView {
+    transform: rotateY(180deg) scale(1.25, 2);
+    transition: all 0.5s;
+}
 
-            &:nth-child(4).inView {
-                background-color: #039be5;
-            }
+.nav_line:nth-child(1).inView {
+    background-color: #5e35b1;
+}
 
-            &:nth-child(5).inView {
-                background-color: #00acc1;
-            }
-        }
-    }
+.nav_line:nth-child(2).inView {
+    background-color: #3949ab;
+}
 
-    .back {
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        padding: 2em;
-        background-color: #fff;
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        transform: rotateY(-180deg);
-        backface-visibility: hidden;
-        transition: all 1s;
-    
-        .nav_link {
-            display: block;
-            width: 100%;
-            text-decoration: none;
-            font-size: 2em;
-            transition: border 0.5s;
-            border: 1px solid #fff;
-    
-            &:hover {
-                font-weight: bold;
-            }
-    
-            &.inView {
-                border: 1px solid #777;
-            }
-    
-            &:nth-child(2) {
-                color: #5e35b1;
-            }
-    
-            &:nth-child(3) {
-                color: #3949ab;
-            }
-    
-            &:nth-child(4) {
-                color: #1e88e5;
-            }
-    
-            &:nth-child(5) {
-                color: #039be5;
-            }
-    
-            &:nth-child(6) {
-                color: #00acc1;
-            }
-        }
-    
-        .close {
-            width: 3em;
-            height: 3em;
-            background: none;
-            border: 2px solid red;
-            cursor: pointer;
-            color: red;
-            font-weight: bold;
-        }
-    }
+.nav_line:nth-child(3).inView {
+    background-color: #1e88e5;
+}
+
+.nav_line:nth-child(4).inView {
+    background-color: #039be5;
+}
+
+.nav_line:nth-child(5).inView {
+    background-color: #00acc1;
+}
+
+.nav_link {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    font-size: 2em;
+    transition: border 0.5s;
+    border: 1px solid #fff;
+}
+
+.nav_link:hover {
+    font-weight: bold;
+}
+
+.nav_link.inView {
+    border: 1px solid #777;
+}
+
+.nav_link:nth-child(2) {
+    color: #5e35b1;
+}
+
+.nav_link:nth-child(3) {
+    color: #3949ab;
+}
+
+.nav_link:nth-child(4) {
+    color: #1e88e5;
+}
+
+.nav_link:nth-child(5) {
+    color: #039be5;
+}
+
+.nav_link:nth-child(6) {
+    color: #00acc1;
+}
+
+.close {
+    width: 3em;
+    height: 3em;
+    background: none;
+    border: 2px solid red;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
 }

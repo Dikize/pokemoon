@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 @import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
@@ -53,8 +52,6 @@ img {
 .section {
   position: relative;
   height: auto;
-  padding-top: 100px;
-  padding-bottom: 120px;
 }
 
 .section1-about, .section5-howtobuy, .section6-frequently {
@@ -289,7 +286,7 @@ img {
   padding-top: 30px;
   padding-bottom: 0;
   z-index: 3;
-  background: url(../imgae/METAPOKEMOON_1.png);
+  background: url(../imgae/header-loggo.png);
   background-position: right;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -353,6 +350,13 @@ img {
   line-height: 1.1;
   font-weight: 900;
   text-align: left;
+  background-image: -webkit-gradient(linear, left top, right top, from(#12299d), to(#db195b));
+  background-image: linear-gradient(to right, #12299d, #db195b);
+  -webkit-background-clip: text;
+  background-color: #12299d;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 
 @media screen and (max-width: 960px) {
@@ -667,7 +671,6 @@ header {
   max-height: 6em;
   -webkit-perspective: 100vh;
           perspective: 100vh;
-  z-index: 1000;
 }
 
 #navBarMobil.open {
@@ -678,16 +681,6 @@ header {
   max-width: 90vw;
   height: 90vh;
   max-height: 40em;
-}
-
-#navBarMobil.open .front {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-#navBarMobil.open .back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
 }
 
 #navBarMobil .front {
@@ -712,38 +705,9 @@ header {
           backface-visibility: hidden;
 }
 
-#navBarMobil .front .nav_line {
-  display: block;
-  width: 2em;
-  height: 2px;
-  background-color: #333;
-}
-
-#navBarMobil .front .nav_line.inView {
-  -webkit-transform: rotateY(180deg) scale(1.25, 2);
-          transform: rotateY(180deg) scale(1.25, 2);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-#navBarMobil .front .nav_line:nth-child(1).inView {
-  background-color: #5e35b1;
-}
-
-#navBarMobil .front .nav_line:nth-child(2).inView {
-  background-color: #3949ab;
-}
-
-#navBarMobil .front .nav_line:nth-child(3).inView {
-  background-color: #1e88e5;
-}
-
-#navBarMobil .front .nav_line:nth-child(4).inView {
-  background-color: #039be5;
-}
-
-#navBarMobil .front .nav_line:nth-child(5).inView {
-  background-color: #00acc1;
+#navBarMobil.open .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 #navBarMobil .back {
@@ -770,7 +734,46 @@ header {
   transition: all 1s;
 }
 
-#navBarMobil .back .nav_link {
+#navBarMobil.open .back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.nav_line {
+  display: block;
+  width: 2em;
+  height: 2px;
+  background-color: #333;
+}
+
+.nav_line.inView {
+  -webkit-transform: rotateY(180deg) scale(1.25, 2);
+          transform: rotateY(180deg) scale(1.25, 2);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.nav_line:nth-child(1).inView {
+  background-color: #5e35b1;
+}
+
+.nav_line:nth-child(2).inView {
+  background-color: #3949ab;
+}
+
+.nav_line:nth-child(3).inView {
+  background-color: #1e88e5;
+}
+
+.nav_line:nth-child(4).inView {
+  background-color: #039be5;
+}
+
+.nav_line:nth-child(5).inView {
+  background-color: #00acc1;
+}
+
+.nav_link {
   display: block;
   width: 100%;
   text-decoration: none;
@@ -780,35 +783,35 @@ header {
   border: 1px solid #fff;
 }
 
-#navBarMobil .back .nav_link:hover {
+.nav_link:hover {
   font-weight: bold;
 }
 
-#navBarMobil .back .nav_link.inView {
+.nav_link.inView {
   border: 1px solid #777;
 }
 
-#navBarMobil .back .nav_link:nth-child(2) {
+.nav_link:nth-child(2) {
   color: #5e35b1;
 }
 
-#navBarMobil .back .nav_link:nth-child(3) {
+.nav_link:nth-child(3) {
   color: #3949ab;
 }
 
-#navBarMobil .back .nav_link:nth-child(4) {
+.nav_link:nth-child(4) {
   color: #1e88e5;
 }
 
-#navBarMobil .back .nav_link:nth-child(5) {
+.nav_link:nth-child(5) {
   color: #039be5;
 }
 
-#navBarMobil .back .nav_link:nth-child(6) {
+.nav_link:nth-child(6) {
   color: #00acc1;
 }
 
-#navBarMobil .back .close {
+.close {
   width: 3em;
   height: 3em;
   background: none;
@@ -891,6 +894,11 @@ header {
   background: linear-gradient(#f9d924, #ff2c24);
   -webkit-animation: animateClock 5s ease-in-out infinite;
           animation: animateClock 5s ease-in-out infinite;
+  background: url(../imgae/pokeball1.png);
+  background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-main .main .timer .boxClock::after {
@@ -907,6 +915,11 @@ header {
           animation: animateClock 5s ease-in-out infinite;
   -webkit-animation-delay: -2.5s;
           animation-delay: -2.5s;
+  background: url(../imgae/pokeball2.png);
+  background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .container-main .main .timer .boxClock .clock {
@@ -1368,6 +1381,16 @@ header {
   .boxClock::before, .boxClock::after {
     display: none;
   }
+  .slide {
+    height: 400px !important;
+  }
+  .slide .container-slide {
+    display: none !important;
+  }
+  .slide p {
+    width: 90% !important;
+    margin-top: 39px !important;
+  }
   .section4-roadmap .roadmap-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1709,15 +1732,18 @@ header {
 }
 
 .icons {
+  width: 100%;
+  margin: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 30px 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .icons a {
@@ -1752,6 +1778,12 @@ header {
   border-radius: 5px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+.icons a .layer span img {
+  width: 40px;
+  height: 40px;
+  margin: auto;
 }
 
 .icons a .layer span:nth-child(1) {
@@ -1808,6 +1840,14 @@ header {
 .icons a:nth-child(1) .text {
   color: #4267b2;
   border-color: #4267b2;
+}
+
+.icons a:nth-child(1) .layer span img,
+.icons a:nth-child(1) .text img {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  color: #4267b2;
 }
 
 .icons a:nth-child(2) .layer span,
@@ -3530,10 +3570,700 @@ footer .copyright .container-cube .cube .top::before, footer .copyright .contain
   }
 }
 
-@media (max-width: 870px) {
-  .container-main .main .slide {
-    display: none !important;
+.Container-cradle {
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 50px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-perspective-origin: center calc(50% - 2.4em);
+          perspective-origin: center calc(50% - 2.4em);
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.cradle {
+  position: relative;
+  -webkit-animation: rotate 60s infinite linear;
+          animation: rotate 60s infinite linear;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
   }
+}
+
+@keyframes rotate {
+  to {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+.floor {
+  position: absolute;
+  width: 20em;
+  height: 20em;
+  background-color: #fff;
+  background-image: radial-gradient(#012a, #111 66%), url("https://assets.codepen.io/1948355/marble01.jpg");
+  background-size: 20em, 10em;
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
+          transform: translate(-50%, -50%) rotateX(90deg) translateZ(-3em);
+}
+
+.floor::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 8.5em;
+  height: 4.5em;
+  background-color: #000;
+  -webkit-filter: blur(0.3em);
+          filter: blur(0.3em);
+}
+
+.wood {
+  --width: 0;
+  --height: 0;
+  --depth: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: var(--width);
+  height: var(--height);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.wood.base {
+  --width: 8em;
+  --height: 1em;
+  --depth: 4em;
+  -webkit-transform: translate(-50%, calc(-50% + 2.5em));
+          transform: translate(-50%, calc(-50% + 2.5em));
+}
+
+.wood.poll {
+  --width: 0.25em;
+  --height: 3em;
+  --depth: 0.25em;
+}
+
+.wood.poll:nth-child(3) {
+  -webkit-transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), 1.5em);
+          transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), 1.5em);
+}
+
+.wood.poll:nth-child(4) {
+  -webkit-transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), -1.5em);
+          transform: translate3d(calc(-50% + 3.5em), calc(-50% + 0.5em), -1.5em);
+}
+
+.wood.poll:nth-child(5) {
+  -webkit-transform: translate3d(calc(-50% + -3.5em), calc(-50% + 0.5em), 1.5em);
+          transform: translate3d(calc(-50% + -3.5em), calc(-50% + 0.5em), 1.5em);
+}
+
+.wood.poll:nth-child(6) {
+  -webkit-transform: translate3d(calc(-50% + -3.5em), calc(-50% + 0.5em), -1.5em);
+          transform: translate3d(calc(-50% + -3.5em), calc(-50% + 0.5em), -1.5em);
+}
+
+.wood.strecher {
+  --width: 8em;
+  --height: 0.25em;
+  --depth: 1em;
+}
+
+.wood.strecher:nth-child(7) {
+  -webkit-transform: translate3d(-50%, calc(-50% - 1em), 1.5em);
+          transform: translate3d(-50%, calc(-50% - 1em), 1.5em);
+}
+
+.wood.strecher:nth-child(8) {
+  -webkit-transform: translate3d(-50%, calc(-50% - 1em), -1.5em);
+          transform: translate3d(-50%, calc(-50% - 1em), -1.5em);
+}
+
+.wood.strecher .dots::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at 76% 50%, #777 0px, #7770 2px), radial-gradient(circle at 63% 50%, #777 0px, #7770 2px), radial-gradient(circle at 50% 50%, #777 0px, #7770 2px), radial-gradient(circle at 37% 50%, #777 0px, #7770 2px), radial-gradient(circle at 24% 50%, #777 0px, #7770 2px);
+}
+
+.wood > * {
+  position: absolute;
+  -webkit-box-shadow: 0 0 1em #0007 inset;
+          box-shadow: 0 0 1em #0007 inset;
+  background-size: 5em;
+  background-image: url("https://assets.codepen.io/1948355/wood04.png");
+}
+
+.wood > .top {
+  width: var(--width);
+  height: var(--depth);
+  -webkit-transform: translateY(-50%) rotateX(90deg);
+          transform: translateY(-50%) rotateX(90deg);
+  background-color: #6f463f;
+}
+
+.wood > .left {
+  width: var(--depth);
+  height: var(--height);
+  -webkit-transform: translateX(-50%) rotateY(90deg);
+          transform: translateX(-50%) rotateY(90deg);
+  background-color: #5f3c35;
+}
+
+.wood > .right {
+  width: var(--depth);
+  height: var(--height);
+  right: 0;
+  -webkit-transform: translateX(50%) rotateY(90deg);
+          transform: translateX(50%) rotateY(90deg);
+  background-color: #1d1211;
+}
+
+.wood > .front {
+  width: var(--width);
+  height: var(--height);
+  -webkit-transform: translateZ(calc(var(--depth) / 2));
+          transform: translateZ(calc(var(--depth) / 2));
+  background-color: #3E2723;
+}
+
+.wood > .back {
+  width: var(--width);
+  height: var(--height);
+  -webkit-transform: translateZ(calc(var(--depth) / -2));
+          transform: translateZ(calc(var(--depth) / -2));
+  background-color: #3E2723;
+}
+
+.ballPlate {
+  position: absolute;
+  top: -1em;
+  width: 2em;
+  height: 3em;
+  -webkit-transform: translate(-50%, 0%) rotateY(90deg);
+          transform: translate(-50%, 0%) rotateY(90deg);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.ballPlate:nth-child(9) {
+  left: -2.05em;
+  -webkit-animation: ballPlateStart 3s infinite;
+          animation: ballPlateStart 3s infinite;
+}
+
+.ballPlate:nth-child(9) .ballWrapper {
+  -webkit-animation: ballWrapperStart 3s infinite;
+          animation: ballWrapperStart 3s infinite;
+}
+
+.ballPlate:nth-child(9) .ball {
+  background-position-y: 0%;
+}
+
+.ballPlate:nth-child(10) {
+  left: -1.025em;
+  -webkit-animation: ballPlateSwing 3s linear infinite;
+          animation: ballPlateSwing 3s linear infinite;
+}
+
+.ballPlate:nth-child(10) .ballWrapper {
+  -webkit-animation: ballWrapperSwing 3s linear infinite;
+          animation: ballWrapperSwing 3s linear infinite;
+}
+
+.ballPlate:nth-child(10) .ball {
+  background-position-y: 25%;
+}
+
+.ballPlate:nth-child(11) {
+  left: 0;
+  -webkit-animation: ballPlateSwing 3s linear infinite;
+          animation: ballPlateSwing 3s linear infinite;
+}
+
+.ballPlate:nth-child(11) .ballWrapper {
+  -webkit-animation: ballWrapperSwing 3s linear infinite;
+          animation: ballWrapperSwing 3s linear infinite;
+}
+
+.ballPlate:nth-child(11) .ball {
+  background-position-y: 50%;
+}
+
+.ballPlate:nth-child(12) {
+  left: 1.025em;
+  -webkit-animation: ballPlateSwing 3s linear infinite;
+          animation: ballPlateSwing 3s linear infinite;
+}
+
+.ballPlate:nth-child(12) .ballWrapper {
+  -webkit-animation: ballWrapperSwing 3s linear infinite;
+          animation: ballWrapperSwing 3s linear infinite;
+}
+
+.ballPlate:nth-child(12) .ball {
+  background-position-y: 75%;
+}
+
+.ballPlate:nth-child(13) {
+  left: 2.05em;
+  -webkit-animation: ballPlateEnd 3s infinite;
+          animation: ballPlateEnd 3s infinite;
+}
+
+.ballPlate:nth-child(13) .ballWrapper {
+  -webkit-animation: ballWrapperEnd 3s infinite;
+          animation: ballWrapperEnd 3s infinite;
+}
+
+.ballPlate:nth-child(13) .ball {
+  background-position-y: 100%;
+}
+
+@-webkit-keyframes ballPlateSwing {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+}
+
+@keyframes ballPlateSwing {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+}
+
+@-webkit-keyframes ballPlateStart {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+  75% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-80deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-80deg);
+  }
+}
+
+@keyframes ballPlateStart {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+  75% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-80deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-80deg);
+  }
+}
+
+@-webkit-keyframes ballPlateEnd {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  25% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(80deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(80deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+}
+
+@keyframes ballPlateEnd {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(5deg);
+  }
+  25% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(80deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(80deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+            transform: translate(-50%, 0%) rotateY(90deg) rotateX(-5deg);
+  }
+}
+
+@-webkit-keyframes ballWrapperSwing {
+  0%,
+  100% {
+    -webkit-transform: rotateY(90deg) rotate(-5deg);
+            transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg) rotate(5deg);
+            transform: rotateY(90deg) rotate(5deg);
+  }
+}
+
+@keyframes ballWrapperSwing {
+  0%,
+  100% {
+    -webkit-transform: rotateY(90deg) rotate(-5deg);
+            transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotateY(90deg) rotate(5deg);
+            transform: rotateY(90deg) rotate(5deg);
+  }
+}
+
+@-webkit-keyframes ballWrapperStart {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(-5deg);
+            transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(5deg);
+            transform: rotateY(90deg) rotate(5deg);
+  }
+  75% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: rotateY(90deg) rotate(80deg);
+            transform: rotateY(90deg) rotate(80deg);
+  }
+}
+
+@keyframes ballWrapperStart {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(-5deg);
+            transform: rotateY(90deg) rotate(-5deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(5deg);
+            transform: rotateY(90deg) rotate(5deg);
+  }
+  75% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: rotateY(90deg) rotate(80deg);
+            transform: rotateY(90deg) rotate(80deg);
+  }
+}
+
+@-webkit-keyframes ballWrapperEnd {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(-5deg);
+            transform: rotateY(90deg) rotate(-5deg);
+  }
+  25% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: rotateY(90deg) rotate(-80deg);
+            transform: rotateY(90deg) rotate(-80deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(5deg);
+            transform: rotateY(90deg) rotate(5deg);
+  }
+}
+
+@keyframes ballWrapperEnd {
+  0%,
+  100% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(-5deg);
+            transform: rotateY(90deg) rotate(-5deg);
+  }
+  25% {
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    -webkit-transform: rotateY(90deg) rotate(-80deg);
+            transform: rotateY(90deg) rotate(-80deg);
+  }
+  50% {
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-transform: rotateY(90deg) rotate(5deg);
+            transform: rotateY(90deg) rotate(5deg);
+  }
+}
+
+.ballPlate .ballWrapper {
+  position: absolute;
+  bottom: 0.1em;
+  left: calc(50% - 0.5em);
+  width: 1em;
+  height: 1em;
+}
+
+.ballPlate .ball {
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  background-color: #fff;
+  border-radius: 50%;
+  background-image: radial-gradient(circle at top, #fff, #678a, #000), url("https://assets.codepen.io/1948355/marble01.jpg");
+  background-size: 1em, 5em;
+  -webkit-box-shadow: 0 0 10px #000a inset;
+          box-shadow: 0 0 10px #000a inset;
+  animation: backPos 120s infinite linear, rotate 60s infinite linear reverse;
+}
+
+@-webkit-keyframes backPos {
+  from {
+    background-position-x: center, 5em;
+  }
+  to {
+    background-position-x: center, 0;
+  }
+}
+
+@keyframes backPos {
+  from {
+    background-position-x: center, 5em;
+  }
+  to {
+    background-position-x: center, 0;
+  }
+}
+
+.ballPlate .line {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 2.15em;
+  background-color: #fff7;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.ballPlate .line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff7;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+.ballPlate .line:nth-child(2) {
+  -webkit-transform: translateX(-1px) rotate(-20deg);
+          transform: translateX(-1px) rotate(-20deg);
+}
+
+.ballPlate .line:nth-child(3) {
+  right: 0;
+  -webkit-transform: translateX(1px) rotate(20deg);
+          transform: translateX(1px) rotate(20deg);
+}
+
+.shadow {
+  position: absolute;
+  top: 50%;
+  width: 3em;
+  height: 3em;
+  background-image: radial-gradient(#0006, #0000 50%);
+}
+
+.shadow:nth-child(1) {
+  -webkit-animation: shadowSwing 3s ease-out infinite, shadowStart 3s ease-out infinite;
+          animation: shadowSwing 3s ease-out infinite, shadowStart 3s ease-out infinite;
+}
+
+.shadow:nth-child(2) {
+  left: 2.975em;
+  -webkit-animation: shadowSwing 3s linear infinite;
+          animation: shadowSwing 3s linear infinite;
+}
+
+.shadow:nth-child(3) {
+  left: 4em;
+  -webkit-animation: shadowSwing 3s linear infinite;
+          animation: shadowSwing 3s linear infinite;
+}
+
+.shadow:nth-child(4) {
+  left: 5.025em;
+  -webkit-animation: shadowSwing 3s linear infinite;
+          animation: shadowSwing 3s linear infinite;
+}
+
+.shadow:nth-child(5) {
+  -webkit-animation: shadowSwing 3s ease-out infinite, shadowEnd 3s ease-out infinite;
+          animation: shadowSwing 3s ease-out infinite, shadowEnd 3s ease-out infinite;
+}
+
+@-webkit-keyframes shadowSwing {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(10px);
+            transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(10px);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(-10px);
+            transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(-10px);
+  }
+}
+
+@keyframes shadowSwing {
+  0%,
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(10px);
+            transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(10px);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(-10px);
+            transform: translate(-50%, -50%) rotateX(0deg) translateZ(0em) translateX(-10px);
+  }
+}
+
+@-webkit-keyframes shadowStart {
+  0%,
+  50%,
+  100% {
+    left: 1.95em;
+    opacity: 1;
+  }
+  75% {
+    left: 0;
+    opacity: -0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes shadowStart {
+  0%,
+  50%,
+  100% {
+    left: 1.95em;
+    opacity: 1;
+  }
+  75% {
+    left: 0;
+    opacity: -0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@-webkit-keyframes shadowEnd {
+  0%,
+  50%,
+  100% {
+    left: 6.05em;
+    opacity: 1;
+  }
+  25% {
+    left: 8em;
+    opacity: -0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+@keyframes shadowEnd {
+  0%,
+  50%,
+  100% {
+    left: 6.05em;
+    opacity: 1;
+  }
+  25% {
+    left: 8em;
+    opacity: -0.5;
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+}
+
+.twitterLink {
+  font-size: 24px;
 }
 
 footer {

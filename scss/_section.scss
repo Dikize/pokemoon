@@ -52,6 +52,11 @@
                     border-radius: 10px;
                     background: linear-gradient(#f9d924, #ff2c24);
                     animation: animateClock 5s ease-in-out infinite;
+                    background: url(../imgae/pokeball1.png);
+                    background-position: right;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                 }
 
                 &::after {
@@ -65,6 +70,11 @@
                     background: linear-gradient(#01d6ff, #0f24f9);
                     animation: animateClock 5s ease-in-out infinite;
                     animation-delay: -2.5s;
+                    background: url(../imgae/pokeball2.png);
+                    background-position: right;
+                    background-attachment: fixed;
+                    background-repeat: no-repeat;
+                    background-size: cover;
                 }
 
                 .clock {
@@ -165,7 +175,7 @@
     @extend %customSection
 }
 
-;
+
 
 .section1-about {
     @extend %customSectionFlexCol;
@@ -495,6 +505,19 @@
 
     }
 
+    .slide {
+        height: 400px !important;
+
+        .container-slide {
+            display: none !important
+        }
+
+        p {
+            width: 90% !important;
+            margin-top: 39px !important;
+        }
+    }
+
     .section4-roadmap {
 
         .roadmap-content {
@@ -507,7 +530,6 @@
         }
     }
 }
-
 
 @media screen and (max-width: 767px) {
     .section3-tokenomics {
@@ -562,12 +584,12 @@
 
     .timer {
         .clock {
-            width: 320px!important;
-            height: 394px!important;
+            width: 320px !important;
+            height: 394px !important;
 
             #countdown {
                 flex-wrap: wrap;
-                
+
                 .block {
                     height: 100px;
                     display: flex;
