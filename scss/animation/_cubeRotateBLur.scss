@@ -10,7 +10,7 @@
         width: 176px;
         height: 176px;
         transform-style: preserve-3d;
-        animation: animate 4s linear infinite;
+        animation: animateCube 4s linear infinite;
 
         & div {
             position: absolute;
@@ -80,7 +80,7 @@
     }
 }
 
-@keyframes animate {
+@keyframes animateCube {
     0% {
         transform: rotateX(-30deg) rotateY(0deg);
     }

@@ -13,7 +13,7 @@ list.forEach(elements => {
 // background color sorti du hover
 list.forEach(elements => {
     elements.addEventListener('mouseleave', function (event) {
-        bg.style.backgroundColor = "#fff"
+        bg.style.backgroundColor = "#0e1538"
     })
 })
 

@@ -346,6 +346,7 @@
 
 .socialMedial .sci {
   position: relative;
+  margin-bottom: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1765,7 +1766,7 @@
           filter: grayscale(0%);
 }
 
-@-webkit-keyframes animate {
+@-webkit-keyframes animateCube {
   0% {
     -webkit-transform: rotateX(-30deg) rotateY(0deg);
             transform: rotateX(-30deg) rotateY(0deg);
@@ -1776,7 +1777,7 @@
   }
 }
 
-@keyframes animate {
+@keyframes animateCube {
   0% {
     -webkit-transform: rotateX(-30deg) rotateY(0deg);
             transform: rotateX(-30deg) rotateY(0deg);
