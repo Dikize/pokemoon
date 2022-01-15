@@ -197,13 +197,19 @@
 }
 
 .icons {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 30px 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .icons a {
-  margin: 0 20px;
+  margin: 18px 20px;
   text-decoration: none;
   color: #fff;
   display: block;
@@ -1305,6 +1311,12 @@
   }
 }
 
+@media (max-width: 479px) {
+  .CardGlass:nth-child(1)::before, .CardGlass:nth-child(1)::after {
+    width: 77%;
+  }
+}
+
 .containerAnimeValise {
   font-family: 'Anton', sans-serif;
   height: 353px;
@@ -1466,7 +1478,25 @@
           transform-origin: top;
 }
 
-.top1 .right {
+.top1 .up::before {
+  content: 'MetaPokemon';
+  position: absolute;
+  font-size: x-large;
+  top: 3%;
+  right: 27%;
+  width: 100%;
+  height: 100px;
+  background: url(../img/pokeball.png);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg) translate(-27%, -16%);
+          transform: rotate(180deg) translate(-27%, -16%);
+  text-align: center;
+  line-height: 0px;
+}
+
+.right {
   left: 100%;
   top: 0%;
   width: 160px;
@@ -1477,7 +1507,7 @@
           transform-origin: left;
 }
 
-.top1 .left {
+.left {
   left: 0%;
   top: 0%;
   width: 160px;
@@ -1488,7 +1518,7 @@
           transform-origin: left;
 }
 
-.top1 .front {
+.front {
   left: 0%;
   top: 0%;
   width: 320px;
@@ -1499,7 +1529,7 @@
           transform-style: preserve-3d;
 }
 
-.top1 .lockTop {
+.lockTop {
   position: absolute;
   bottom: 0;
   width: 56px;
@@ -1511,31 +1541,31 @@
           transform: translateZ(0.1px);
 }
 
-.top1 .lockTop:nth-child(1) {
+.lockTop:nth-child(1) {
   left: 36px;
 }
 
-.top1 .lockTop:nth-child(1)::before {
+.lockTop:nth-child(1)::before {
   right: 3px;
 }
 
-.top1 .lockTop:nth-child(1)::after {
+.lockTop:nth-child(1)::after {
   right: 6px;
 }
 
-.top1 .lockTop:nth-child(2) {
+.lockTop:nth-child(2) {
   right: 36px;
 }
 
-.top1 .lockTop:nth-child(2)::before {
+.lockTop:nth-child(2)::before {
   left: 3px;
 }
 
-.top1 .lockTop:nth-child(2)::after {
+.lockTop:nth-child(2)::after {
   left: 6px;
 }
 
-.top1 .lockTop::before {
+.lockTop::before {
   content: '';
   position: absolute;
   top: 3px;
@@ -1766,6 +1796,12 @@
           filter: grayscale(0%);
 }
 
+@media (max-width: 870px) {
+  .containerAnimeValise {
+    display: none;
+  }
+}
+
 @-webkit-keyframes animateCube {
   0% {
     -webkit-transform: rotateX(-30deg) rotateY(0deg);
@@ -1786,53 +1822,6 @@
     -webkit-transform: rotateX(-30deg) rotateY(360deg);
             transform: rotateX(-30deg) rotateY(360deg);
   }
-}
-
-.container-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.container-slide .box {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-animation: animateSile 60s linear infinite;
-          animation: animateSile 60s linear infinite;
-}
-
-.container-slide .box span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-          transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
-  -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #004);
-}
-
-.container-slide .box span img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 @-webkit-keyframes animateSile {

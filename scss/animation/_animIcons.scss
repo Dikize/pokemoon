@@ -1,8 +1,11 @@
 .icons {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    justify-content: center;
 
     a {
-        margin: 0 20px;
+        margin: 18px 20px;
         text-decoration: none;
         color: #fff;
         display: block;
@@ -13,11 +16,11 @@
                 transform: rotate(-35deg) skew(20deg);
             }
         }
+
         .layer {
             width: 55px;
             height: 55px;
             transition: transform .3s;
-
 
             span {
                 position: absolute;
@@ -38,7 +41,7 @@
                     opacity: .4;
                     transform: translate(5px, -5px);
                 }
-                
+
                 &:nth-child(3) {
                     opacity: .6;
                     transform: translate(10px, -10px);

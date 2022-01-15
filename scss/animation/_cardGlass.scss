@@ -188,3 +188,12 @@
         transform: translateY(10px);
     }
 }
+
+@media (max-width: 479px) {
+    .CardGlass {
+        &:nth-child(1)::before, 
+        &:nth-child(1)::after {
+            width: 77%;
+        }
+    }
+}

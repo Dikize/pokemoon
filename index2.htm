@@ -20,42 +20,32 @@
 
 <body>
 
-    <div class="containerAnimeValise">
-        <div class="briefcase">
-    
-            <div class="bottom">
-                <div class="front">
-                    <div class="lock"></div>
-                    <div class="lock"></div>
-                    <div class="handle_conn"></div>
-                    <div class="handle_conn"></div>
-                </div>
-                <div class="back"></div>
-                <div class="left"></div>
-                <div class="right"></div>
+    <div class="container-navBarMobile">
+        <div class="blackBackground"></div>
+        <nav id="navBar">
+            <div class="front" onclick="openMenu();">
+                <div class="nav_line"></div>
+                <div class="nav_line"></div>
+                <div class="nav_line"></div>
+                <div class="nav_line"></div>
+                <div class="nav_line"></div>
             </div>
-    
-            <div class="handle">
-                <div class="handle_grip"></div>
-                <div class="handle_blur1"></div>
-                <div class="handle_blur2"></div>
+
+            <div class="back">
+                <div></div>
+                <a href="#section_a" class="nav_link" onclick="closeMenu();">About Us</a>
+                <a href="#section_b" class="nav_link" onclick="closeMenu();">Tokenomics</a>
+                <a href="#section_c" class="nav_link" onclick="closeMenu();">Roadmap</a>
+                <a href="#section_d" class="nav_link" onclick="closeMenu();">How to Buy</a>
+                <a href="#section_e" class="nav_link" onclick="closeMenu();">FAQ</a>
+                <a href="#section_e" class="nav_link" onclick="closeMenu();">Live Chart</a>
+                <button class="close" onclick="closeMenu();">X</button>
+                <div></div>
             </div>
-    
-            <div class="top">
-                <div class="up"></div>
-                <div class="right"></div>
-                <div class="left"></div>
-                <div class="front">
-                    <div class="lockTop"></div>
-                    <div class="lockTop"></div>
-                </div>
-                <div class="light"></div>
-            </div>
-    
-        </div>
+        </nav>
     </div>
 
-    <script src="./js/animation.js" defer></script>
+    <script src="./js/Navbar/navMobil.js" defer></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

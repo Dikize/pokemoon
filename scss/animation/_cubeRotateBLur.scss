@@ -89,3 +89,26 @@
         transform: rotateX(-30deg) rotateY(360deg);
     }
 }
+
+// @media (max-width: 960px) {
+//     %AnimationContainerCube {
+//         & .cube {
+//             position: relative;
+//             width: 70px;
+//             height:70px;
+//         }
+//     }
+
+
+//     %topBlur {
+//         width: 70px;
+//         height: 70px;
+//         transform: rotateX(90deg) translateZ(50px); /* 176px / 2 = 88px */
+    
+//         &::before {
+//             content: "";
+//             width: 70px;
+//             height: 70px;
+//         }
+//     }
+// }
