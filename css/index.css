@@ -1980,10 +1980,6 @@ header {
 }
 
 .socialMedial .sci li a:hover.lineChart {
-  background-color: #4dff03;
-}
-
-.socialMedial .sci li a:hover.creditCard {
   background-color: #a400eb;
 }
 
