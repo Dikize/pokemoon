@@ -66,7 +66,7 @@
                         </li>
 
                         <li>
-                            <a href="#">
+                            <a href="#tokenomics">
                                 <span class="icon"><img src="./img/2.svg" alt=""></span>
                                 <span class="title">Tokenomics</span>
                             </a>
@@ -118,11 +118,11 @@
                     <div class="back">
                         <div></div>
                         <a href="#section_a" class="nav_link" onclick="closeMenu();">About Us</a>
-                        <a href="#section_b" class="nav_link" onclick="closeMenu();">Tokenomics</a>
-                        <a href="#section_c" class="nav_link" onclick="closeMenu();">Roadmap</a>
-                        <a href="#section_d" class="nav_link" onclick="closeMenu();">How to Buy</a>
-                        <a href="#section_e" class="nav_link" onclick="closeMenu();">FAQ</a>
-                        <a href="#section_e" class="nav_link" onclick="closeMenu();">Live Chart</a>
+                        <a href="#tokenomics" class="nav_link" onclick="closeMenu();">Tokenomics</a>
+                        <a href="#roadmap" class="nav_link" onclick="closeMenu();">Roadmap</a>
+                        <a href="#howToBuy" class="nav_link" onclick="closeMenu();">How to Buy</a>
+                        <a href="#faq" class="nav_link" onclick="closeMenu();">FAQ</a>
+                        <a href="https://poocoin.app/tokens" class="nav_link" onclick="closeMenu();">Live Chart</a>
                         <button class="close" onclick="closeMenu();">X</button>
                         <div></div>
                     </div>
@@ -272,7 +272,7 @@
                 <!-- </div> -->
             </section>
 
-            <div class="d">
+            <div id="tokenomics" class="d">
                 <h2 class="text-center lh-1 h1">Tokenomics</h2>
                 <h3 class="text-center h5 lh-1">Token Distribution</h3>
 
@@ -439,7 +439,7 @@
 
 
 
-            <div class="containerAnimeValise col-12">
+            <div id="howToBuy" class="containerAnimeValise col-12">
                 <div class="briefcase">
 
                     <div class="bottom">
@@ -502,10 +502,7 @@
                         <h2 class="howto-title">
                             <a href="#" class="main-title">Buy and send BNB to MetaMask</a>
                         </h2>
-                        <p class="howto-p">
-                            Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.).
-                            Transfer the tokens to your MetaMask wallet address.
-                            <strong>BEP-20 addresses start with a &quot;0x&quot;</strong>
+                        <p class="howto-p"> Buy BNB on an exchange (i.e. Binance, Kraken, Coinbase etc.). Transfer the tokens to your MetaMask wallet address. <strong>BEP-20 addresses start with a &quot;0x&quot;</strong>
                         </p>
                     </div>
                 </div>
@@ -513,12 +510,8 @@
                 <div class="card-animCard2">
                     <div class="icon">
                         <svg width="40" height="40" viewBox="0 0 21 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M7.88399 13.7272L7.88378 24.0585L12.6266 19.2123L13.9155 20.5334L8.25318 26.3166L8.25955 26.3227L6.97049 27.6436L0 20.5219L1.28906 19.201L6.04187 24.0585L6.04262 13.7272H7.88399Z"
-                                fill="CurrentColor" />
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M13.116 14.8916L13.1162 4.56034L8.37342 9.4065L7.08446 8.08547L12.7468 2.30223L12.7405 2.29612L14.0295 0.975191L21 8.09689L19.7109 9.41781L14.9581 4.56034L14.9574 14.8916L13.116 14.8916Z"
-                                fill="CurrentColor" /> </svg>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.88399 13.7272L7.88378 24.0585L12.6266 19.2123L13.9155 20.5334L8.25318 26.3166L8.25955 26.3227L6.97049 27.6436L0 20.5219L1.28906 19.201L6.04187 24.0585L6.04262 13.7272H7.88399Z" fill="CurrentColor" />
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.116 14.8916L13.1162 4.56034L8.37342 9.4065L7.08446 8.08547L12.7468 2.30223L12.7405 2.29612L14.0295 0.975191L21 8.09689L19.7109 9.41781L14.9581 4.56034L14.9574 14.8916L13.116 14.8916Z" fill="CurrentColor" /> </svg>
                     </div>
                     <div class="content">
                         <h2 class="howto-title">
@@ -528,8 +521,7 @@
                             <a href="https://pancakeswap.finance/swap?outputCurrency=0x1889f1ae46c2da9e8f3532a21cc4719e2db35f7b"
                                 target="_blank">Click here</a>
                             to head on over to PancakeSwap or use this address
-                            <strong class="bold-text-3 text-crypt">0x1889f1ae46c2da9e8f3532a21cc4719e2db35f7b
-                            </strong>
+                            <strong class="bold-text-3 text-crypt">0x1889f1ae46c2da9e8f3532a21cc4719e2db35f7b </strong>
                             to select METAPOKEMOON. Set the slippage tolerance to 10% (sometimes it may be a bit more, depending on how much demand there is)
                         </p>
                     </div>
@@ -554,11 +546,7 @@
                         <h2 class="howto-title">
                             <a href="#" class="main-title">View $METAPOKEMOON and HODL</a>
                         </h2>
-                        <p class="howto-p">
-                            Swap BNB for METAPOKEMOON. Now you need to add METAPOKEMOON to your MetaMask (<a
-                                href="https://docs.yearn.finance/how-to-guides/how-to-add-a-custom-token-to-metamask">Tutorial
-                                here</a>) or Trust Wallet to view your $METAPOKEMOON. Lastly HODL!
-                        </p>
+                        <p class="howto-p"> Swap BNB for METAPOKEMOON. Now you need to add METAPOKEMOON to your MetaMask (<a href="https://docs.yearn.finance/how-to-guides/how-to-add-a-custom-token-to-metamask">Tutorial here</a>) or Trust Wallet to view your $METAPOKEMOON. Lastly HODL! </p>
                     </div>
                 </div>
             </div>
@@ -597,11 +585,7 @@
                         </div>
                         <div class="c-faq-a">
                             <div class="c-faq-a-text">
-                                <p class="faq-p">
-                                    At this early stage, $METAPOKEMOON will be available on Stealth Launch Trading on
-                                    Pancakeswap.
-                                    Our Token will be available for Trading on bigger exchanges
-                                    later on.
+                                <p class="faq-p"> At this early stage, $METAPOKEMOON will be available on Stealth Launch Trading on Pancakeswap. Our Token will be available for Trading on bigger exchanges later on.
                                 </p>
                             </div>
                         </div>
